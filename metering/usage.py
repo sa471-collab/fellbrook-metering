@@ -16,4 +16,5 @@ def totals_by_bucket(events):
 
 
 def export_csv(totals):
-    return "\n".join(f"{bucket},{units}" for bucket, units in sorted(totals.items()))
+    rows = [f"{bucket},{units}" for bucket, units in sorted(totals.items())]
+    return "\n".join(["hour,units"] + rows)

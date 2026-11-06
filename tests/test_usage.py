@@ -32,7 +32,7 @@ class TotalsTest(unittest.TestCase):
 class ExportTest(unittest.TestCase):
     def test_export_is_sorted(self):
         totals = {"2026-11-03T15": 2, "2026-11-03T14": 7}
-        self.assertEqual(export_csv(totals), "2026-11-03T14,7\n2026-11-03T15,2")
+        self.assertEqual(export_csv(totals), "hour,units\n2026-11-03T14,7\n2026-11-03T15,2")
 
 
 if __name__ == "__main__":
